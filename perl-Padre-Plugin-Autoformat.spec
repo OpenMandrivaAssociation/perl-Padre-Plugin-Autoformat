@@ -1,6 +1,6 @@
 
 %define realname   Padre-Plugin-Autoformat
-%define version    1.0.0
+%define version    1.1.2
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
