@@ -9,16 +9,16 @@ Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Reformat your text within Padre
-Source:     http://www.cpan.org/modules/by-module/Padre/%{realname}-%{version}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Source:     http://www.cpan.org/modules/by-module/Padre/%{realname}-%{version}.tar.gz
 BuildRequires: perl-devel
 BuildRequires: perl(Padre)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Text::Autoformat)
 BuildRequires: perl(Module::Build::Compat)
-
+BuildRequires: perl(Module::Util)
 BuildArch: noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 This plugin allows one to reformat her text automatically with
