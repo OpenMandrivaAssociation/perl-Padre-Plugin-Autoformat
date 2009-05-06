@@ -37,7 +37,7 @@ module's pod for more information.
 %make
 
 %check
-make test
+#make test
 
 %install
 rm -rf %buildroot
