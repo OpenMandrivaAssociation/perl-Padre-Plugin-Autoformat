@@ -1,5 +1,5 @@
 %define upstream_name    Padre-Plugin-Autoformat
-%define upstream_version v1.2.0
+%define upstream_version 1.22
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -29,15 +29,15 @@ module's pod for more information.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+%{__perl} Build.PL installdirs=vendor
+./Build
 
 %check
-#make test
+./Build test
 
 %install
 rm -rf %buildroot
-%makeinstall_std
+./Build install destdir=%{buildroot}
 
 %clean
 rm -rf %buildroot
